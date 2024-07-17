@@ -3,16 +3,14 @@ const express = require("express");
 const router = express.Router();
 
 /* ************************************************************************* */
-// Import And Use Routers Here
+// Define Your API Routes Here
 /* ************************************************************************* */
 
-const itemsRouter = require("./items/router");
-const playerRouter = require("./player/router");
-const authRouter = require("./auths/router");
+// Import authActions module for handling auth-related operations
+const { login, logout } = require("../../../controllers/authActions");
 
-router.use("/items", itemsRouter);
-router.use("/auths", authRouter);
-router.use("/player", playerRouter);
+router.post("/login", login);
+router.post("/logout", logout);
 
 /* ************************************************************************* */
 

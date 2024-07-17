@@ -41,6 +41,17 @@ class PlayerRepository extends AbstractRepository {
     return rows[0];
   }
 
+  async readLogin(pseudo) {
+    // readOne
+    // Execute the SQL SELECT query to retrieve a specific person by its ID
+    const [rows] = await this.database.query(
+      `select * from ${this.table} where pseudo = ?`,
+      [pseudo]
+    );
+    // Return the first row of the result, which represents the item
+    return rows[0];
+  }
+
   // The U of CRUD - Update operation
   // TODO: Implement the update operation to modify an existing player
 
