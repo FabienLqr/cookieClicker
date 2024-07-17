@@ -63,6 +63,15 @@ class PlayerRepository extends AbstractRepository {
     return player;
   }
 
+  async multiple(player) {
+    const { multiplicateur, id } = player;
+    await this.database.query(
+      `UPDATE ${this.table} SET multiplicateur = ? WHERE id= ?`,
+      [multiplicateur, id]
+    );
+    return player;
+  }
+
   // The D of CRUD - Delete operation
   async delete(id) {
     // Exécuter la requête SQL DELETE pour supprimer une personne dans la table "person"

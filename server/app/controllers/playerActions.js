@@ -47,6 +47,19 @@ const edit = async (req, res, next) => {
     next(error);
   }
 };
+
+const multiple = async (req, res, next) => {
+  try {
+    const player = await tables.player.multiple(req.body);
+    if (player == null) {
+      res.sendStatus(404);
+    } else {
+      res.status(200).json(player);
+    }
+  } catch (error) {
+    next(error);
+  }
+};
 // The A of BREAD - Add (Create) operation
 const add = async (req, res, next) => {
   // Extract the player data from the request body
@@ -83,6 +96,7 @@ module.exports = {
   browse,
   read,
   edit,
+  multiple,
   add,
   destroy,
 };
