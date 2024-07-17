@@ -1,0 +1,23 @@
+@import "./style/header.scss";
+@import "./style/nav.scss";
+@import "./style/home.scss";
+@import "./style//footer.scss";
+
+* {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+main {
+  background-image: url("./assets/images/paysage.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

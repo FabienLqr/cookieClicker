@@ -1,0 +1,30 @@
+footer {
+  border-top: #1c1b18 solid;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url("./assets/images/dirt.png");
+  color: white;
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    .footLink {
+      text-decoration: none;
+      box-shadow: none;
+      color: inherit;
+      .footImg {
+        width: 2rem;
+        height: auto;
+      }
+    }
+    .footSpan {
+      font-size: 1rem;
+    }
+  }
+}

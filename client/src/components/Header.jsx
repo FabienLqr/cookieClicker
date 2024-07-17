@@ -1,5 +1,13 @@
+import argent from "../assets/images/argent.png";
+
 function Header() {
-    return ( <p>Header</p> );
+  return (
+    <header>
+      <img src={argent} alt="logo" className="logo" />
+      <h1>Cookie Clicker</h1>
+      <img src={argent} alt="logo" className="logo" />
+    </header>
+  );
 }
 
 export default Header;

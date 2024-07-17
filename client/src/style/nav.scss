@@ -1,0 +1,10 @@
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-image: url("./assets/images/nuage.webp");
+  a {
+    text-decoration: none;
+    box-shadow: none;
+    color: inherit;
+  }
+}

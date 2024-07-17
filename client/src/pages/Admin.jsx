@@ -1,5 +1,10 @@
 function Admin() {
-    return ( <h1>Ne s'affiche que pour les admin</h1> );
+  return (
+    <>
+      <h2>Administration</h2>
+      <p>la nav d'admin</p>
+    </>
+  );
 }
 
 export default Admin;

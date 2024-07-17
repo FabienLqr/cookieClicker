@@ -1,0 +1,11 @@
+header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url("./assets/images/cielnuit.webp");
+  .logo {
+    width: 30px;
+    height: auto;
+  }
+}

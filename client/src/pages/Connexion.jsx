@@ -35,7 +35,7 @@ function Connexion() {
       login(user.data);
       setPassword("");
       setPseudo("");
-      navigate("/"); // Redirige l'utilisateur vers la page d'accueil après une connexion réussie
+      navigate("/game"); // Redirige l'utilisateur vers la page d'accueil après une connexion réussie
     } catch (error) {
       console.error(error.message);
     }

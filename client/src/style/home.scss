@@ -1,0 +1,18 @@
+@import "./upgrade.scss";
+
+.cookie {
+  display: block;
+  margin: 20px auto;
+  width: 25%;
+}
+
+.argent {
+  width: 20px;
+  height: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .cookie {
+    width: 60%;
+  }
+}

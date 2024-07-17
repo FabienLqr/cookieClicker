@@ -7,27 +7,23 @@ function Nav() {
 
   return (
     <>
-      <nav aria-label="Navigation">
-        <ul>
-          {isAuthenticated &&
-            player.role_id === 1 && ( // Affiche "Admin" seulement pour les admins
-              <Link to="/admin">Admin</Link>
-            )}
-        </ul>
-        <ul className="log-nav">
-          {!isAuthenticated ? (
-            <>
-              <Link to="/acceuil">Acceuil</Link>
-              <Link to="/connexion">Connexion</Link>
-              <Link to="/inscription">Inscription</Link>
-            </>
-          ) : (
-            <>
-              <Link to="/">Game</Link>
-              <Link to="/deconnexion">Deconnexion</Link>
-            </>
+      <nav>
+        {isAuthenticated &&
+          player.role_id === 1 && ( // Affiche "Admin" seulement pour les admins
+            <Link to="/admin">Admin</Link>
           )}
-        </ul>
+        {!isAuthenticated ? (
+          <>
+            <Link to="/">Acceuil</Link>
+            <Link to="/connexion">Connexion</Link>
+            <Link to="/inscription">Inscription</Link>
+          </>
+        ) : (
+          <>
+            <Link to="/game">Game</Link>
+            <Link to="/deconnexion">Deconnexion</Link>
+          </>
+        )}
       </nav>
       <main>
         <Outlet />
