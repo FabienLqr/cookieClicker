@@ -2,6 +2,7 @@
 const ItemRepository = require("./models/ItemRepository");
 const PlayerRepository = require("./models/PlayerRepository");
 const UpgradeRepository = require("./models/UpgradeRepository");
+const AchatRepository = require("./models/AchatRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
@@ -14,6 +15,7 @@ const tables = {};
 tables.item = new ItemRepository();
 tables.player = new PlayerRepository();
 tables.upgrade = new UpgradeRepository();
+tables.achat = new AchatRepository();
 
 /* ************************************************************************* */
 
