@@ -53,16 +53,23 @@ class PlayerRepository extends AbstractRepository {
   }
 
   // The U of CRUD - Update operation
-  // TODO: Implement the update operation to modify an existing player
 
-  // async update(player) {
-  //   ...
-  // }
+  async update(player) {
+    const { cookie, id } = player;
+    await this.database.query(
+      `UPDATE ${this.table} SET cookie = ? WHERE id= ?`,
+      [cookie, id]
+    );
+    return player;
+  }
 
   // The D of CRUD - Delete operation
   async delete(id) {
     // Exécuter la requête SQL DELETE pour supprimer une personne dans la table "person"
-    const [row] = await this.database.query(`DELETE FROM ${this.table} WHERE id = ?`, [id]);
+    const [row] = await this.database.query(
+      `DELETE FROM ${this.table} WHERE id = ?`,
+      [id]
+    );
     return row;
   }
 }

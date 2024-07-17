@@ -7,7 +7,7 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import item-related actions
-const { browse, read, add, destroy } = require("../../../controllers/playerActions");
+const { browse, read, edit, add, destroy } = require("../../../controllers/playerActions");
 const { hashPassword } = require("../../../services/auth");
 
 // Route to get a list of items
@@ -15,6 +15,8 @@ router.get("/", browse);
 
 // Route to get a specific item by ID
 router.get("/:id", read);
+
+router.put("/:id", edit);
 
 // Route to add a new item
 router.post("/", hashPassword, add);

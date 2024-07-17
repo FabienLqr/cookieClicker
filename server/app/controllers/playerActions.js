@@ -35,8 +35,18 @@ const read = async (req, res, next) => {
 };
 
 // The E of BREAD - Edit (Update) operation
-// This operation is not yet implemented
-
+const edit = async (req, res, next) => {
+  try {
+    const player = await tables.player.update(req.body);
+    if (player == null) {
+      res.sendStatus(404);
+    } else {
+      res.status(200).json(player);
+    }
+  } catch (error) {
+    next(error);
+  }
+};
 // The A of BREAD - Add (Create) operation
 const add = async (req, res, next) => {
   // Extract the player data from the request body
@@ -72,7 +82,7 @@ const destroy = async (req, res, next) => {
 module.exports = {
   browse,
   read,
-  // edit,
+  edit,
   add,
   destroy,
 };
