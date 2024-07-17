@@ -38,7 +38,7 @@ class PlayerRepository extends AbstractRepository {
     const [rows] = await this.database.query(`select * from ${this.table}`);
 
     // Return the array of players
-    return rows[0];
+    return rows;
   }
 
   async readLogin(pseudo) {
