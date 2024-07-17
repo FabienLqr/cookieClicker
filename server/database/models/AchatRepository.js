@@ -12,8 +12,8 @@ class achatRepository extends AbstractRepository {
   async create(achat) {
     // Execute the SQL INSERT query to add a new achat to the "achat" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (title, user_id) values (?, ?)`,
-      [achat.title, achat.user_id]
+      `insert into ${this.table} (id_player, id_upgrade) values (?, ?)`,
+      [achat.id_player, achat.id_upgrade]
     );
 
     // Return the ID of the newly inserted achat
