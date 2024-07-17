@@ -60,11 +60,11 @@ class PlayerRepository extends AbstractRepository {
   // }
 
   // The D of CRUD - Delete operation
-  // TODO: Implement the delete operation to remove an player by its ID
-
-  // async delete(id) {
-  //   ...
-  // }
+  async delete(id) {
+    // Exécuter la requête SQL DELETE pour supprimer une personne dans la table "person"
+    const [row] = await this.database.query(`DELETE FROM ${this.table} WHERE id = ?`, [id]);
+    return row;
+  }
 }
 
 module.exports = PlayerRepository;
