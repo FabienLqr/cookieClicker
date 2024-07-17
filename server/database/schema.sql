@@ -1,12 +1,30 @@
-create table user (
-  id int unsigned primary key auto_increment not null,
-  email varchar(255) not null unique,
-  password varchar(255) not null
+CREATE TABLE role(
+  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  name VARCHAR(20) NOT NULL
+)
+
+CREATE TABLE player(
+  id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,  
+  password VARCHAR(255) NOT NULL,
+  cookie BIGINT UNSIGNED DEFAULT 0,
+  role_id INT UNSIGNED,
+  FOREIGN KEY (role_id) REFERENCES role(id)
 );
 
-create table item (
-  id int unsigned primary key auto_increment not null,
-  title varchar(255) not null,
-  user_id int unsigned not null,
-  foreign key(user_id) references user(id)
+CREATE TABLE upgrade (
+  id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  description TEXT,
+  cout BIGINT UNSIGNED NOT NULL,
+  multiplicateur DOUBLE NOT NULL,
+  image_url VARCHAR(255)
+);
+
+CREATE TABLE achat (
+  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  id_player BIGINT UNSIGNED NOT NULL,
+  id_upgrade BIGINT UNSIGNED NOT NULL,
+  FOREIGN KEY (id_player) REFERENCES player(id),
+  FOREIGN KEY (id_upgrade) REFERENCES upgrade(id)
 );
