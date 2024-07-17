@@ -8,6 +8,7 @@ CREATE TABLE player(
   pseudo VARCHAR(30) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL,
   cookie BIGINT UNSIGNED DEFAULT 0,
+  multiplicateur BIGINT UNSIGNED DEFAULT 1,
   role_id INT UNSIGNED,
   FOREIGN KEY (role_id) REFERENCES role(id)
 );
