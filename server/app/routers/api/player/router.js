@@ -9,6 +9,7 @@ const router = express.Router();
 // Import item-related actions
 const { browse, read, edit, multiple, add, destroy } = require("../../../controllers/playerActions");
 const { hashPassword } = require("../../../services/auth");
+const { isAuth } = require("../../../services/isAuth");
 
 // Route to get a list of items
 router.get("/", browse);
@@ -17,15 +18,15 @@ router.get("/", browse);
 router.get("/:id", read);
 
 // edit le nombre de cookies
-router.put("/:id", edit);
+router.put("/:id", isAuth, edit);
 
 // edit le multiplicateur
-router.put("/multiple/:id", multiple);
+router.put("/multiple/:id", isAuth, multiple);
 
-// Route to add a new item
+// Route to add a new player
 router.post("/", hashPassword, add);
 
-router.delete("/:id", destroy);
+router.delete("/:id", isAuth, destroy);
 
 /* ************************************************************************* */
 
