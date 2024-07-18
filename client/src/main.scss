@@ -51,3 +51,21 @@ button {
 .pasDeco {
   text-decoration: none;
 }
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
