@@ -4,6 +4,7 @@
 @import "./style/footer.scss";
 @import "./style/admin.scss";
 @import "./style/mediaQuery.scss";
+@import "./style/acceuil.scss";
 
 @font-face {
   font-family: "PKMN RBYGSC";
@@ -19,6 +20,7 @@
 h2 {
   text-align: center;
   margin-top: 15px;
+  padding: 5px;
 }
 
 main {
@@ -31,6 +33,7 @@ main {
   position: absolute;
   bottom: 5%;
   top: 10.9%;
+  width: 100%;
 }
 
 button {
@@ -47,10 +50,4 @@ button {
 
 .pasDeco {
   text-decoration: none;
-}
-
-.blockBouton {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 20px;
 }

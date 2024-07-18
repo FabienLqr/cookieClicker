@@ -1,0 +1,16 @@
+.presentation {
+  padding: 0 150px;
+  font-size: 2rem;
+}
+
+.blockBouton {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 25px;
+}
+
+.blockPresentation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

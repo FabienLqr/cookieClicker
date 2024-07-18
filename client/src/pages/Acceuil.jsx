@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 function Acceuil() {
   return (
     <>
-      <h1>Bienvenue</h1>
+      <h2>Bienvenue</h2>
       <section>
-        <article>
+        <article className="blockPresentation">
           <h2>Comment jouer?</h2>
-          <p>
+          <p className="presentation">
             Pour jouer c'est tres simple, il suffit de se creer un compte et de
             se connecter. Une fois connecter, plus qu'a appuyer sur le cookie
             geant en plein milieu de la page ! A chaque click, votre nombre de
