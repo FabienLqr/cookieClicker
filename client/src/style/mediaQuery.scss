@@ -1,0 +1,32 @@
+@media screen and (max-width: 500px) {
+  nav {
+    padding: 15px;
+    width: 100%;
+  }
+  main {
+    position: absolute;
+    bottom: 0;
+  }
+  .moreCookie {
+    display: block;
+    margin: 50px 125px;
+    width: 25%;
+  }
+  .cookie {
+    width: 200%;
+    margin: 0;
+  }
+  .upgrade {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+    display: block;
+    margin: 0 auto;
+
+    .upgradeButton {
+      margin: 20px;
+      width: 90%;
+    }
+  }
+}

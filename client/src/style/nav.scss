@@ -2,9 +2,13 @@ nav {
   display: flex;
   justify-content: space-evenly;
   background-image: url("./assets/images/nuage.webp");
+  background-image: linear-gradient(to bottom, #4c3d64, #256adc);
   a {
     text-decoration: none;
     box-shadow: none;
     color: inherit;
+    font-style: italic;
+    font-size: 1rem;
+    margin: 5px;
   }
 }

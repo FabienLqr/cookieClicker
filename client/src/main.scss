@@ -1,12 +1,19 @@
 @import "./style/header.scss";
 @import "./style/nav.scss";
 @import "./style/home.scss";
-@import "./style//footer.scss";
-@import "./style//admin.scss";
+@import "./style/footer.scss";
+@import "./style/admin.scss";
+@import "./style/mediaQuery.scss";
+
+@font-face {
+  font-family: "PKMN RBYGSC";
+  src: url("chemin_vers_votre_police/PKMN_RBYGSC.ttf");
+}
 
 * {
   margin: 0;
   font-size: 1.25rem;
+  font-family: "PKMN RBYGSC", sans-serif;
 }
 
 h2 {
@@ -21,4 +28,29 @@ main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  position: absolute;
+  bottom: 5%;
+  top: 10.9%;
+}
+
+button {
+  border: 2px solid black;
+  background-color: #bc4a3c;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.pasDeco {
+  text-decoration: none;
+}
+
+.blockBouton {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
 }
