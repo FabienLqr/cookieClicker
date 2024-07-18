@@ -14,6 +14,8 @@ import Admin from "./pages/Admin";
 import Inscription from "./pages/Inscription";
 import Connexion from "./pages/Connexion";
 import Deconnexion from "./pages/Deconnexion";
+import Player from "./pages/Player";
+import Amelioration from "./pages/Amelioration";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,9 @@ const router = createBrowserRouter([
       { path: "/inscription", element: <Inscription /> },
       { path: "/connexion", element: <Connexion /> },
       { path: "/deconnexion", element: <Deconnexion /> },
+      { path: "/player/:id", element: <Player />},
+      { path: "/amelioration/:id", element: <Amelioration />},
+      
       {
         path: "/admin",
         element: (
