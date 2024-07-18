@@ -3,7 +3,19 @@
 .cookie {
   display: block;
   margin: 20px auto;
+  width: 100%;
+}
+
+.moreCookie {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  display: block;
+  margin: 20px auto;
   width: 25%;
+}
+
+.moreCookie:active {
+  transform: scale(0.9);
 }
 
 .argent {
