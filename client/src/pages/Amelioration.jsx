@@ -114,7 +114,7 @@ function Amelioration() {
             value={formData.image_url}
             onChange={handleChange}
           />
-          <button type="submit">submit</button>
+          <button type="submit" className="submit">submit</button>
           </form>
     </>
   );

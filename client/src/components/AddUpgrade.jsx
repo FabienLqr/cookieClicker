@@ -37,7 +37,7 @@ function AddUpgrade() {
         }
       };
 
-    return ( <><h3>Ajout</h3><form onSubmit={handleSubmit}><label htmlFor="name">Entrer le nouveau nom:</label>
+    return ( <><h2>Ajout</h2><form onSubmit={handleSubmit}><label htmlFor="name">Entrer le nouveau nom:</label>
         <input
           type="text"
           id="name"
@@ -78,7 +78,7 @@ function AddUpgrade() {
           value={formData.image_url}
           onChange={handleChange}
         />
-        <button type="submit">submit</button>
+        <button type="submit" className="submit">submit</button>
         </form></> );
 }
 
