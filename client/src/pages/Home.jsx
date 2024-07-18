@@ -12,9 +12,10 @@ function Home() {
   const { player } = useAuth();
   const { cookie, id, multiplicateur } = player;
   const [cookies, setCookies] = useState(cookie);
+  const [mult, setMult] = useState(multiplicateur);
 
   const moreCookie = async () => {
-    setCookies(cookies + 1 * multiplicateur);
+    setCookies(cookies + 1 * mult);
 
     try {
       await axios.put(
@@ -43,7 +44,8 @@ function Home() {
       <button type="button" className="moreCookie" onClick={moreCookie}>
         <img src={argent} alt="le cookie a clicker" className="cookie" />
       </button>{" "}
-      <Upgrade />
+      
+      <Upgrade  cookies={cookies} setCookies={setCookies} mult={mult} setMult={setMult} id={id} cookie={cookies}/>
     </>
   );
 }
